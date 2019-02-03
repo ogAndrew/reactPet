@@ -24495,7 +24495,7 @@ var _react = _interopRequireDefault(require("react"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var Pet = function Pet(props) {
-  return _react.default.createElement("div", {}, [_react.default.createElement("h1", {}, props.name), _react.default.createElement("h2", {}, props.animal), _react.default.createElement("h2", {}, props.breed)]);
+  return _react.default.createElement("div", null, _react.default.createElement("h1", null, props.name), _react.default.createElement("h2", null, props.animal), _react.default.createElement("h2", null, props.breed));
 };
 
 var _default = Pet;
@@ -24507,7 +24507,7 @@ var _react = _interopRequireDefault(require("react"));
 
 var _reactDom = require("react-dom");
 
-var _Pet = require("./Pet");
+var _Pet = _interopRequireDefault(require("./Pet"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -24541,35 +24541,28 @@ function (_React$Component) {
   }
 
   _createClass(App, [{
-    key: "handleTitleClick",
-    value: function handleTitleClick() {
-      alert("you clicked the title");
-    }
-  }, {
     key: "render",
     value: function render() {
-      return _react.default.createElement("div", {}, [_react.default.createElement("h1", {
-        onClick: this.handleTitleClick
-      }, "Adopt Me!"), _react.default.createElement(_Pet.Pet, {
+      return _react.default.createElement("div", null, _react.default.createElement("h1", null, "Adopt Me!"), _react.default.createElement(_Pet.default, {
         name: "Luna",
         animal: "dog",
         breed: "Havanese"
-      }), _react.default.createElement(_Pet.Pet, {
+      }), _react.default.createElement(_Pet.default, {
         name: "Pepper",
         animal: "bird",
         breed: "Cockatiel"
-      }), _react.default.createElement(_Pet.Pet, {
+      }), _react.default.createElement(_Pet.default, {
         name: "Hope",
         animal: "dog",
-        breed: "mini-doodle"
-      })]);
+        breed: "Mini-Doodle"
+      }));
     }
   }]);
 
   return App;
 }(_react.default.Component);
 
-ReactDOM.render(_react.default.createElement(App), document.getElementById("root"));
+ReactDOM.render(_react.default.createElement(App, null), document.getElementById("root"));
 },{"react":"../node_modules/react/index.js","react-dom":"../node_modules/react-dom/index.js","./Pet":"Pet.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
